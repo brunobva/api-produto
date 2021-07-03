@@ -32,10 +32,9 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USR }}
           password: ${{ secrets.DOCKERHUB_PWD }}
       - name: Aula 03 - Docker build and Push
-          context:.
-          file:Dockerfile
-          push:true
-          tags:|
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: |
             brunomor7/k8s-api-produto:latest
             brunomor7/k8s-api-produto:${{ github.run_number }}
-    

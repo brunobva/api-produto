@@ -38,3 +38,12 @@ jobs:
           tags:|
             brunomor7/k8s-api-produto:latest
             brunomor7/k8s-api-produto:${{ github.run_number }}
+
+Name: Aula 03 - CD
+  - name:Azure Kubernetes set context
+  uses:Azure/aks-set-context@v1.1
+  with:
+    # Azure credentials i.e. output of `az ad sp create-for-rbac --sdk-auth`
+    creds:| # default is 
+      {{ AZURE_LOGIN }}
+    
